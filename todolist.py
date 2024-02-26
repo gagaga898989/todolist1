@@ -126,13 +126,15 @@ class TodoApp(QWidget):
                     dt2 = datetime.strptime(date_str, "%Y-%m-%d").date()
                     today = datetime.today().date()
                     global dt3
+                    
+                    #今日時点の処理
                     dt3 = dt2 - today
-
-                    self.color_chenge()
 
                     #明日になった時の動作確認用
                     #tomorrow = today + timedelta(days=1)
                     #dt3 = dt2- tomorrow
+
+                    self.color_chenge()
 
                     # 結果の表示
                     global redtodo
